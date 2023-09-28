@@ -24,7 +24,7 @@ def read_serial(ser_port, dest, baudrate):
                 continue
 
             # ファイルに書き込む
-            l = line.rstrip() + "," + str(datetime.datetime.now().strftime("%Y_%m%d_%H%M%S") + "\n")
+            l = line.rstrip() + str(datetime.datetime.now().strftime("%Y_%m%d_%H%M%S") + "\n")
             f.write(l)
 
 
