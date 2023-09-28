@@ -79,10 +79,10 @@ static void wifi_csi_rx_cb(void *ctx, wifi_csi_info_t *info)
 
     for (int i = 1; i < info->len; i++)
     {
-        ets_printf(",%d", info->buf[i]);
+        ets_printf(" %d", info->buf[i]);
     }
 
-    ets_printf("]\"\n");
+    ets_printf("],\"\n");
 }
 
 static void wifi_csi_init()
